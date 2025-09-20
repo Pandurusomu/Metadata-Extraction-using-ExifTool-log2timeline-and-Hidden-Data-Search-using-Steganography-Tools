@@ -36,6 +36,8 @@ Apply steganography detection tools like steghide, zsteg, or binwalk to uncover 
 
 
 ## OUTPUT:
+<img width="648" height="514" alt="Screenshot 2025-09-20 200928" src="https://github.com/user-attachments/assets/8fe90b1c-3640-4b8e-924c-4747a6b9ca6a" />
+
 ### A. Using ExifTool – for file metadata
 - **Install:**
 ```bash
@@ -46,6 +48,9 @@ sudo apt install exiftool -y
 ```bash
 exiftool image.jpg
 ```
+<img width="758" height="422" alt="Screenshot 2025-09-20 195745" src="https://github.com/user-attachments/assets/88cf74ef-ad4f-4c0f-94cf-c8d5649e01ef" />
+
+
 - **Batch process a folder:**
 ```bash
 exiftool -r /path/to/folder
@@ -70,25 +75,28 @@ sudo apt install steghide -y
 ```
 - **Embed data**
 ```
-steghide embed -cf /home/kali/Downloads/wallpaper.jpg -ef /home/kali/Downloads/secret.txt
+steghide embed -cf /home/kali/Pictures/image.png -ef /home/kali/Downloads/secret.txt
 ```
 
 
 - **Extract hidden data:**
 ```
-steghide extract -sf hidden.jpg
+steghide extract -sf image.png
 
 ```
+
 
 
 ### Using binwalk – for file analysis
 ```bash
 sudo apt install binwalk -y
-binwalk suspicious.jpg
+binwalk image.jpg
 ```
 ```bash
-binwalk /home/kali/Downloads/wallpaper.jpg
+binwalk /home/kali/Downloads/image.jpg
 ```
+<img width="871" height="155" alt="Screenshot 2025-09-20 200908" src="https://github.com/user-attachments/assets/79afc8c4-8739-425d-bd63-f5f7f9980f15" />
+
 
 
 ## RESULT:
